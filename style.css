@@ -4,6 +4,7 @@
 --footer-heigth:76px;
 --primary-bg-color:#575252;
 --secondary-bg-color:#C5F1FF;
+--accent-color: rgb(0, 123, 255);
 }
 *{
     margin: 0;
@@ -254,7 +255,7 @@ footer{
     justify-content: center;
     margin-top: 10px;
   }
-  .page-dot {
+  .page-dot{
     width: 10px;
     height: 10px;
     background-color: var(--secondary-bg-color);
@@ -265,3 +266,5 @@ footer{
       background-color: var(--accent-color);
     }
   }
+
+
