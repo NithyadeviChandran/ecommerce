@@ -192,16 +192,16 @@ footer{
 }
 
 #image1 {
-    background-image: url(https://images.thenile.io/r1000/0028399065882.jpg);
+    background-image: url(https://i.dummyjson.com/data/products/2/1.jpg);
 }
 #image2 {
-    background-image: url(https://cdn.shopify.com/s/files/1/0600/0141/9429/products/luqnkgu7pmrtqqk6ugeh_81466610-2352-45c0-b669-ce49981e2caa.jpg?v=1676330166);
+    background-image: url(https://i.dummyjson.com/data/products/3/1.jpg);
 }
 #image3 {
-    background-image: url(https://peeka.co/cdn/shop/products/Kids-digital-camera-model-c-mikayo-bear-kidamento-front.jpg?v=1654006789);
+    background-image: url(https://i.dummyjson.com/data/products/4/1.jpg);
 }
 #image4 {
-    background-image: url(https://www.buddytoys.eu/getattachment/e022a3fd-616b-4878-b399-40f961534f22/BEC-7121.aspx);
+    background-image: url(https://i.dummyjson.com/data/products/5/1.jpg);
 }
 .wrapper {
     display: flex;

@@ -16,17 +16,28 @@ fetch("https://dummyjson.com/products")
 .then(response=>response.json())
 .then(data=>{
     const products = data.products;
-    const product25= products[25];
-    const product25photos = product25.images;
-    renderSlider(product25photos);
-    renderProductDetails(product25);
+    // const product25= products[25];
+    // const product25photos = product25.images;
+    // renderSlider(product25photos);
+    // renderProductDetails(product25);
+    const productIds = ["image1","image2","image3","image4"];
+    productIds.forEach((productId)=>{
+        const imageElement = document.getElementById(productId);
+        console.log('image element',imageElement);
+        imageElement.addEventListener('click', () => {
+            const product = productId.slice(-1);
+            renderSlider(products[product].images);
+            renderProductDetails(products[product]);
+        })
+    })
 })
 .catch(error=>{
-    console.log(error);
+    console.log('error',error);
 })
 
 function renderSlider(photos){
     const slider = document.getElementById('slider');
+    slider.innerHTML ='';
     photos.slice(0,4).forEach((photoUrl) => {
         const image = document.createElement('img');
         image.src=photoUrl;
@@ -70,3 +81,5 @@ function alertOnClick(){
     alert(`${product.title} for EUR ${product.price} has been added to the cart`)
 }
 }
+
+
