@@ -19,6 +19,7 @@ fetch("https://dummyjson.com/products")
     const product25= products[25];
     const product25photos = product25.images;
     renderSlider(product25photos);
+    renderProductDetails(product25);
 })
 .catch(error=>{
     console.log(error);
@@ -44,11 +45,28 @@ if(clickedDot.classList.contains('page-dot')){
     scrollToIndex(index);
 }
 }
-
 function scrollToIndex(index){
     const scrollAmount = index*slider.offsetWidth;
     slider.scrollTo({
         left:scrollAmount,
         behaviour: 'smooth'
     });
+}
+
+
+function renderProductDetails(product){
+const titleElement= document.getElementById('product-title')
+const descriptionElement = document.getElementById('product-description')
+const priceElement = document.getElementById('product-price')
+titleElement.innerText = product.title;
+descriptionElement.innerText = product.description;
+priceElement.innerText = `EUR ${product.price}`;
+
+
+const buyBtn = document.getElementById('buy-btn');
+buyBtn.addEventListener('click',alertOnClick);
+
+function alertOnClick(){
+    alert(`${product.title} for EUR ${product.price} has been added to the cart`)
+}
 }
